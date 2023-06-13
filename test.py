@@ -5,8 +5,8 @@ from operon_searcher.searcher import search_operons
 from operon_searcher.tf import fimo_parser
 from operon_searcher.visualize import visualize_operons
 
-REFSEQ = Path() / 'GCA_000017005.1'
-GENBANK = Path() / 'GCF_000017005.1'
+REFSEQ = Path() / 'RefSeq_GCA_000017005.1'
+GENBANK = Path() / 'Genbank_GCF_000017005.1'
 
 # folder = REFSEQ
 folder = GENBANK
