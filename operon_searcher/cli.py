@@ -84,9 +84,13 @@ def main(
     do_ignore_hypothetical_proteins: bool = typer.Option(
         False,
         "--ignore-hypothetical-proteins",
-        help="Het bestaan van een gen negeren tijdens het zoeken naar operons, als het gen een hypothetical protein is.",
-        file_okay=True
+        help="Het bestaan van een gen negeren tijdens het zoeken naar operons, als het gen een hypothetical protein is."
     ),
+    visualize_use_old_locus_tag: bool = typer.Option(
+        False,
+        "--v-old-locus-tag",
+        help="Gebruik de oude locus tags bij de visualizatie."
+    )
 ):    
     searcher.GENE_OPERON_MAX_GAP          = gene_gap
     searcher.FIMO_BATCH_SIZE              = batch_size
@@ -109,6 +113,7 @@ def main(
         if tfbs_color is not None or gene_color is not None:
             visualizer.TFBS_COLOUR = tfbs_color
             visualizer.GENE_COLOUR = gene_color
+        visualizer.USE_OLD_LOCUS_TAG = visualize_use_old_locus_tag
         visualizer.visualize_operons(operons)
     if do_print:
         rich.print(pformat(tuple(operons.items()), sort_dicts=False))

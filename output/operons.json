@@ -20,7 +20,8 @@
                 "id": "cds-SGO_RS05090",
                 "name": "SGO_RS05090",
                 "product": "amino acid ABC transporter substrate-binding protein/permease",
-                "locus_tag": "SGO_RS05090"
+                "locus_tag": "SGO_RS05090",
+                "old_locus_tag": "SGO_1037"
             }
         ]
     },
@@ -45,7 +46,8 @@
                 "id": "cds-WP_012130676.1",
                 "name": "acnA",
                 "product": "aconitate hydratase AcnA",
-                "locus_tag": "SGO_RS07905"
+                "locus_tag": "SGO_RS07905",
+                "old_locus_tag": "SGO_1613"
             }
         ]
     },
@@ -70,7 +72,8 @@
                 "id": "cds-WP_008808234.1",
                 "name": "SGO_RS01050",
                 "product": "MerR family transcriptional regulator",
-                "locus_tag": "SGO_RS01050"
+                "locus_tag": "SGO_RS01050",
+                "old_locus_tag": "SGO_0214"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -80,7 +83,8 @@
                 "id": "cds-WP_011999750.1",
                 "name": "glnA",
                 "product": "type I glutamate--ammonia ligase",
-                "locus_tag": "SGO_RS01055"
+                "locus_tag": "SGO_RS01055",
+                "old_locus_tag": "SGO_0215"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -90,7 +94,8 @@
                 "id": "cds-WP_011999751.1",
                 "name": "SGO_RS01060",
                 "product": "GNAT family N-acetyltransferase",
-                "locus_tag": "SGO_RS01060"
+                "locus_tag": "SGO_RS01060",
+                "old_locus_tag": "SGO_0216"
             }
         ]
     },
@@ -115,7 +120,8 @@
                 "id": "cds-WP_011999807.1",
                 "name": "SGO_RS01365",
                 "product": "dihydroorotate oxidase",
-                "locus_tag": "SGO_RS01365"
+                "locus_tag": "SGO_RS01365",
+                "old_locus_tag": "SGO_0277"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -125,7 +131,8 @@
                 "id": "cds-WP_011999808.1",
                 "name": "msrB",
                 "product": "peptide-methionine (R)-S-oxide reductase MsrB",
-                "locus_tag": "SGO_RS01370"
+                "locus_tag": "SGO_RS01370",
+                "old_locus_tag": "SGO_0278"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -135,7 +142,8 @@
                 "id": "cds-WP_011999809.1",
                 "name": "SGO_RS01375",
                 "product": "DUF4947 domain-containing protein",
-                "locus_tag": "SGO_RS01375"
+                "locus_tag": "SGO_RS01375",
+                "old_locus_tag": "SGO_0279"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -145,7 +153,8 @@
                 "id": "cds-WP_041789491.1",
                 "name": "SGO_RS01380",
                 "product": "TRZ/ATZ family protein",
-                "locus_tag": "SGO_RS01380"
+                "locus_tag": "SGO_RS01380",
+                "old_locus_tag": "SGO_0280"
             }
         ]
     },
@@ -170,7 +179,8 @@
                 "id": "cds-WP_011999806.1",
                 "name": "gdhA",
                 "product": "NADP-specific glutamate dehydrogenase",
-                "locus_tag": "SGO_RS01360"
+                "locus_tag": "SGO_RS01360",
+                "old_locus_tag": "SGO_0276"
             }
         ]
     },
@@ -195,7 +205,8 @@
                 "id": "cds-WP_012000086.1",
                 "name": "SGO_RS02905",
                 "product": "class I SAM-dependent RNA methyltransferase",
-                "locus_tag": "SGO_RS02905"
+                "locus_tag": "SGO_RS02905",
+                "old_locus_tag": "SGO_0590"
             },
             {
                 "organism_id": "NC_009785.1",
@@ -205,7 +216,8 @@
                 "id": "cds-WP_041789565.1",
                 "name": "SGO_RS02910",
                 "product": "cell division site-positioning protein MapZ family protein",
-                "locus_tag": "SGO_RS02910"
+                "locus_tag": "SGO_RS02910",
+                "old_locus_tag": "SGO_0591"
             }
         ]
     },
@@ -230,7 +242,8 @@
                 "id": "cds-WP_012131049.1",
                 "name": "SGO_RS10215",
                 "product": "DUF4041 domain-containing protein",
-                "locus_tag": "SGO_RS10215"
+                "locus_tag": "SGO_RS10215",
+                "old_locus_tag": "SGO_2086"
             }
         ]
     }

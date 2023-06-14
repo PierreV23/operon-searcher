@@ -7,6 +7,7 @@ from dna_features_viewer import GraphicFeature, GraphicRecord # deze import duur
 
 TFBS_COLOUR = "#ffd700"
 GENE_COLOUR = "#cffccc"
+USE_OLD_LOCUS_TAG = False
 
 def create_graphic_features(tf: TFBS, genes: list[Gene]) -> list[GraphicFeature]:
     features=[]
@@ -14,8 +15,15 @@ def create_graphic_features(tf: TFBS, genes: list[Gene]) -> list[GraphicFeature]
         GraphicFeature(start=tf.start, end=tf.end, strand=eval(tf.strand.value + str(tf.start % 3 or 3)), color=TFBS_COLOUR, label="TFBS")
     )
     for gene in genes:
+        if gene.name == gene.locus_tag:
+            if USE_OLD_LOCUS_TAG:
+                label = gene.old_locus_tag or gene.locus_tag
+            else:
+                label = gene.locus_tag or gene.old_locus_tag
+        else:
+            label = gene.name
         features.append(
-        GraphicFeature(start=gene.start, end=gene.end, strand=eval(tf.strand.value + str(tf.start % 3 or 3)), color=GENE_COLOUR, label=gene.name)
+        GraphicFeature(start=gene.start, end=gene.end, strand=eval(tf.strand.value + str(tf.start % 3 or 3)), color=GENE_COLOUR, label=label)
     )
     return features
 

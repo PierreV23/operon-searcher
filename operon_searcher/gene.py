@@ -5,6 +5,8 @@ from pathlib import Path
 
 # locus_tag : name
 gene_names = {}
+# locus_tag : old_locus_tag
+gene_old_locus_tags = {}
 
 @dataclasses.dataclass
 class Gene(SubSequence):
@@ -12,6 +14,7 @@ class Gene(SubSequence):
     name: str
     product: str
     locus_tag: str
+    old_locus_tag: str
     __post_init__ = automatic_field_converter
     from_dict = from_dict
     def __hash__(self) -> int:
@@ -42,7 +45,9 @@ def genomic_parser(filepath: Path) -> list[Gene]:
             if soort_seq != 'CDS':
                 if soort_seq in ('gene', 'pseudogene'):
                     gene_names[data['locus_tag']] = data['name']
+                    gene_old_locus_tags[data['locus_tag']] = data.get('old_locus_tag')
                 continue
             data['name'] = gene_names[data['locus_tag']] # gene -> CDS
+            data['old_locus_tag'] = data.get('old_locus_tag') or gene_old_locus_tags.get(data['locus_tag'])
             l.append(Gene.from_dict(data))
         return l
