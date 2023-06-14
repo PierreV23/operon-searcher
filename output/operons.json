@@ -1,0 +1,219 @@
+[
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 1671915,
+            "end": 1671935,
+            "strand": "-",
+            "score": 77.7,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
+            "pvalue": 1.7e-08,
+            "qvalue": 0.0223,
+            "sequence": "TTATGTCAGAAAATATAACGT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 1669171,
+                "end": 1671834,
+                "strand": "-",
+                "id": "gene-SGO_RS07905",
+                "name": "acnA"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 231012,
+            "end": 231032,
+            "strand": "+",
+            "score": 65.7,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
+            "pvalue": 2.68e-07,
+            "qvalue": 0.264,
+            "sequence": "ATATGTCAGAAAAAGTAACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 231300,
+                "end": 231665,
+                "strand": "+",
+                "id": "gene-SGO_RS01050",
+                "name": "SGO_RS01050"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 231695,
+                "end": 233041,
+                "strand": "+",
+                "id": "gene-SGO_RS01055",
+                "name": "glnA"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 233095,
+                "end": 233499,
+                "strand": "+",
+                "id": "gene-SGO_RS01060",
+                "name": "SGO_RS01060"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 294209,
+            "end": 294229,
+            "strand": "+",
+            "score": 63.3,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
+            "pvalue": 4.63e-07,
+            "qvalue": 0.295,
+            "sequence": "TGTTGTTATATTTTATTACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 294430,
+                "end": 295368,
+                "strand": "+",
+                "id": "gene-SGO_RS01365",
+                "name": "SGO_RS01365"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 295532,
+                "end": 296467,
+                "strand": "+",
+                "id": "gene-SGO_RS01370",
+                "name": "msrB"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 296552,
+                "end": 297238,
+                "strand": "+",
+                "id": "gene-SGO_RS01375",
+                "name": "SGO_RS01375"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 297330,
+                "end": 298601,
+                "strand": "+",
+                "id": "gene-SGO_RS01380",
+                "name": "SGO_RS01380"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 294211,
+            "end": 294231,
+            "strand": "-",
+            "score": 62.4,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
+            "pvalue": 5.72e-07,
+            "qvalue": 0.295,
+            "sequence": "TCATGTAATAAAATATAACAA"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 292848,
+                "end": 294194,
+                "strand": "-",
+                "id": "gene-SGO_RS01360",
+                "name": "gdhA"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 638679,
+            "end": 638699,
+            "strand": "+",
+            "score": 59.9,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
+            "pvalue": 1.02e-06,
+            "qvalue": 0.334,
+            "sequence": "TGATGTAAGTAAATCTCAAGT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 638750,
+                "end": 639916,
+                "strand": "+",
+                "id": "gene-SGO_RS02905",
+                "name": "SGO_RS02905"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 639913,
+                "end": 641325,
+                "strand": "+",
+                "id": "gene-SGO_RS02910",
+                "name": "SGO_RS02910"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 1281950,
+            "end": 1281970,
+            "strand": "-",
+            "score": 55.4,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
+            "pvalue": 2.86e-06,
+            "qvalue": 0.548,
+            "sequence": "TCGTGTTATAATAGTTGACGT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 1281736,
+                "end": 1281807,
+                "strand": "-",
+                "id": "gene-SGO_RS06065",
+                "name": "SGO_RS06065"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 1281858,
+                "end": 1281938,
+                "strand": "-",
+                "id": "gene-SGO_RS06070",
+                "name": "SGO_RS06070"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
+            "start": 2151106,
+            "end": 2151126,
+            "strand": "-",
+            "score": 55.2,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
+            "pvalue": 3.01e-06,
+            "qvalue": 0.548,
+            "sequence": "TGGTGTCAAGTAATCTGATAT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 2149756,
+                "end": 2151009,
+                "strand": "-",
+                "id": "gene-SGO_RS10215",
+                "name": "SGO_RS10215"
+            }
+        ]
+    }
+]
