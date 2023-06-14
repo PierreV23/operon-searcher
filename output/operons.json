@@ -2,6 +2,31 @@
     {
         "tfbs": {
             "organism_id": "NC_009785.1",
+            "start": 1087526,
+            "end": 1087546,
+            "strand": "-",
+            "score": 79.6,
+            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
+            "pvalue": 1.09e-08,
+            "qvalue": 0.0214,
+            "sequence": "TTATGTCATATAACCTAACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "NC_009785.1",
+                "start": 1085996,
+                "end": 1087372,
+                "strand": "-",
+                "id": "cds-SGO_RS05090",
+                "name": "SGO_RS05090",
+                "product": "amino acid ABC transporter substrate-binding protein/permease",
+                "locus_tag": "SGO_RS05090"
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "NC_009785.1",
             "start": 1671915,
             "end": 1671935,
             "strand": "-",
@@ -17,8 +42,10 @@
                 "start": 1669171,
                 "end": 1671834,
                 "strand": "-",
-                "id": "gene-SGO_RS07905",
-                "name": "acnA"
+                "id": "cds-WP_012130676.1",
+                "name": "acnA",
+                "product": "aconitate hydratase AcnA",
+                "locus_tag": "SGO_RS07905"
             }
         ]
     },
@@ -40,24 +67,30 @@
                 "start": 231300,
                 "end": 231665,
                 "strand": "+",
-                "id": "gene-SGO_RS01050",
-                "name": "SGO_RS01050"
+                "id": "cds-WP_008808234.1",
+                "name": "SGO_RS01050",
+                "product": "MerR family transcriptional regulator",
+                "locus_tag": "SGO_RS01050"
             },
             {
                 "organism_id": "NC_009785.1",
                 "start": 231695,
                 "end": 233041,
                 "strand": "+",
-                "id": "gene-SGO_RS01055",
-                "name": "glnA"
+                "id": "cds-WP_011999750.1",
+                "name": "glnA",
+                "product": "type I glutamate--ammonia ligase",
+                "locus_tag": "SGO_RS01055"
             },
             {
                 "organism_id": "NC_009785.1",
                 "start": 233095,
                 "end": 233499,
                 "strand": "+",
-                "id": "gene-SGO_RS01060",
-                "name": "SGO_RS01060"
+                "id": "cds-WP_011999751.1",
+                "name": "SGO_RS01060",
+                "product": "GNAT family N-acetyltransferase",
+                "locus_tag": "SGO_RS01060"
             }
         ]
     },
@@ -79,32 +112,10 @@
                 "start": 294430,
                 "end": 295368,
                 "strand": "+",
-                "id": "gene-SGO_RS01365",
-                "name": "SGO_RS01365"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 295532,
-                "end": 296467,
-                "strand": "+",
-                "id": "gene-SGO_RS01370",
-                "name": "msrB"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 296552,
-                "end": 297238,
-                "strand": "+",
-                "id": "gene-SGO_RS01375",
-                "name": "SGO_RS01375"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 297330,
-                "end": 298601,
-                "strand": "+",
-                "id": "gene-SGO_RS01380",
-                "name": "SGO_RS01380"
+                "id": "cds-WP_011999807.1",
+                "name": "SGO_RS01365",
+                "product": "dihydroorotate oxidase",
+                "locus_tag": "SGO_RS01365"
             }
         ]
     },
@@ -126,8 +137,10 @@
                 "start": 292848,
                 "end": 294194,
                 "strand": "-",
-                "id": "gene-SGO_RS01360",
-                "name": "gdhA"
+                "id": "cds-WP_011999806.1",
+                "name": "gdhA",
+                "product": "NADP-specific glutamate dehydrogenase",
+                "locus_tag": "SGO_RS01360"
             }
         ]
     },
@@ -149,47 +162,20 @@
                 "start": 638750,
                 "end": 639916,
                 "strand": "+",
-                "id": "gene-SGO_RS02905",
-                "name": "SGO_RS02905"
+                "id": "cds-WP_012000086.1",
+                "name": "SGO_RS02905",
+                "product": "class I SAM-dependent RNA methyltransferase",
+                "locus_tag": "SGO_RS02905"
             },
             {
                 "organism_id": "NC_009785.1",
                 "start": 639913,
                 "end": 641325,
                 "strand": "+",
-                "id": "gene-SGO_RS02910",
-                "name": "SGO_RS02910"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 1281950,
-            "end": 1281970,
-            "strand": "-",
-            "score": 55.4,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
-            "pvalue": 2.86e-06,
-            "qvalue": 0.548,
-            "sequence": "TCGTGTTATAATAGTTGACGT"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 1281736,
-                "end": 1281807,
-                "strand": "-",
-                "id": "gene-SGO_RS06065",
-                "name": "SGO_RS06065"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 1281858,
-                "end": 1281938,
-                "strand": "-",
-                "id": "gene-SGO_RS06070",
-                "name": "SGO_RS06070"
+                "id": "cds-WP_041789565.1",
+                "name": "SGO_RS02910",
+                "product": "cell division site-positioning protein MapZ family protein",
+                "locus_tag": "SGO_RS02910"
             }
         ]
     },
@@ -211,8 +197,10 @@
                 "start": 2149756,
                 "end": 2151009,
                 "strand": "-",
-                "id": "gene-SGO_RS10215",
-                "name": "SGO_RS10215"
+                "id": "cds-WP_012131049.1",
+                "name": "SGO_RS10215",
+                "product": "DUF4041 domain-containing protein",
+                "locus_tag": "SGO_RS10215"
             }
         ]
     }

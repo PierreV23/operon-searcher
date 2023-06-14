@@ -11,6 +11,7 @@ class Gene(SubSequence):
     id: str
     name: str
     product: str
+    locus_tag: str
     __post_init__ = automatic_field_converter
     from_dict = from_dict
     def __hash__(self) -> int:

@@ -20,7 +20,7 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
             break
         gene_tail = -1
         for gene in genes:
-            if IGNORE_HYPOTHETICAL_PROTEINS and gene.product == "hypothetical protein":
+            if IGNORE_HYPOTHETICAL_PROTEINS and "hypothetical protein" in gene.product:
                 continue
             if tf.strand != gene.strand:
                 continue
