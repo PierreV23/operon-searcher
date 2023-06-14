@@ -1,5 +1,7 @@
+from dataclasses import asdict
+import json
 from pathlib import Path
-from pprint import pprint, pformat
+from pprint import pformat
 from typing import Annotated, Optional
 import typer
 from operon_searcher import searcher, visualizer
@@ -72,7 +74,13 @@ def main(
         "--gene-color",
         help="Color of gene when visualizing."
     ),
-
+    export: Path = typer.Option(
+        None,
+        "-e",
+        "--export",
+        help="Exporteer operons naar een json bestand.",
+        file_okay=True
+    ),
 ):
     searcher.GENE_OPERON_MAX_GAP          = gene_gap
     searcher.FIMO_BATCH_SIZE              = batch_size
@@ -95,7 +103,21 @@ def main(
     if do_visualize:
         visualize_operons(operons)
     if do_print:
-        rich.print(pformat(tuple(operons.items())))
+        rich.print(pformat(tuple(operons.items()), sort_dicts=False))
+    if export is not None:
+        with open(export, 'w') as file:
+            json.dump(
+                [
+                    {
+                        'tfbs': asdict(tfbs),
+                        'genes': [asdict(gene) for gene in genes]
+                    }
+                    for tfbs, genes in operons.items()
+                ],
+                file,
+                indent=4,
+                sort_keys=False
+            )
 
 
 

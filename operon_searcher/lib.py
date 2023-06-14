@@ -3,10 +3,8 @@ from enum import Enum
 import inspect
 from typing import Callable
 
-import typer
-
-
-class Strand(Enum):
+# `str` is nodig om dit object json serializable te maken.
+class Strand(str, Enum):
     Positive = '+'
     Negative = '-'
 

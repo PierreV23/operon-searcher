@@ -1,6 +1,6 @@
 
 from operon_searcher.gene import Gene
-from operon_searcher.lib import Strand, timer
+from operon_searcher.lib import Strand
 from operon_searcher.tf import TFBS
 
 
@@ -9,7 +9,6 @@ FIMO_BATCH_SIZE = 30
 GENE_TO_BINDING_SITE_MAX_GAP = 300
 MAX_FAILED_HITS = 5
 
-# @timer
 def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
     binding_sites = sorted(binding_sites, key=lambda tfbs: tfbs.pvalue)[:FIMO_BATCH_SIZE]
     failed_hits = 0

@@ -1,13 +1,11 @@
 from pathlib import Path
 from operon_searcher.gene import Gene
-from operon_searcher.lib import timer
 from operon_searcher.tf import TFBS
 from dna_features_viewer import GraphicFeature, GraphicRecord # deze import duurt kapot lang
 
 TFBS_COLOUR = "#ffd700"
 GENE_COLOUR = "#cffccc"
 
-# @timer
 def create_graphic_features(tf: TFBS, genes: list[Gene]) -> list[GraphicFeature]:
     features=[]
     features.append(
