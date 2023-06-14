@@ -31,16 +31,16 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
 
             if tf.strand == Strand.Positive:
                 if gene_tail == -1:
-                    condition = (0 <= gene.start - tf.end <= GENE_TO_BINDING_SITE_MAX_GAP)
+                    condition = (0 <= gene.start - tf.end < GENE_TO_BINDING_SITE_MAX_GAP)
                 else:
-                    condition = ((tf.end < gene.start) and (gene.start - gene_tail <= GENE_OPERON_MAX_GAP))
+                    condition = ((tf.end < gene.start) and (gene.start - gene_tail < GENE_OPERON_MAX_GAP))
                 if condition:
                     gene_tail = gene.end
             elif tf.strand == Strand.Negative:
                 if gene_tail == -1:
-                    condition = (0 <= tf.start - gene.end <= GENE_TO_BINDING_SITE_MAX_GAP)
+                    condition = (0 <= tf.start - gene.end < GENE_TO_BINDING_SITE_MAX_GAP)
                 else:
-                    condition = (tf.start > gene.end and (gene_tail - gene.end <= GENE_OPERON_MAX_GAP))
+                    condition = (tf.start > gene.end and (gene_tail - gene.end < GENE_OPERON_MAX_GAP))
                 if condition:
                     gene_tail = gene.start
             else:
