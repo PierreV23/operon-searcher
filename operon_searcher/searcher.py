@@ -19,7 +19,8 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
         if failed_hits > MAX_FAILED_HITS and n >= 20:
             break
         gene_tail = -1
-        for gene in genes:
+        genes_loop = genes if tf.strand == Strand.Positive else genes[::-1]
+        for gene in genes_loop:
             if IGNORE_HYPOTHETICAL_PROTEINS and "hypothetical protein" in gene.product:
                 continue
             if tf.strand != gene.strand:

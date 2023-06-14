@@ -1,249 +1,289 @@
 [
     {
         "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 1087526,
-            "end": 1087546,
+            "organism_id": "DQ489736.1",
+            "start": 1172034,
+            "end": 1172054,
             "strand": "-",
-            "score": 79.6,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
-            "pvalue": 1.09e-08,
-            "qvalue": 0.0214,
-            "sequence": "TTATGTCATATAACCTAACAT"
+            "score": 76.1,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1-",
+            "pvalue": 2.43e-08,
+            "qvalue": 0.0798,
+            "sequence": "TTATGTTAGAAAACCTAACAC"
         },
         "genes": [
             {
-                "organism_id": "NC_009785.1",
-                "start": 1085996,
-                "end": 1087372,
+                "organism_id": "DQ489736.1",
+                "start": 1171639,
+                "end": 1171974,
                 "strand": "-",
-                "id": "cds-SGO_RS05090",
-                "name": "SGO_RS05090",
-                "product": "amino acid ABC transporter substrate-binding protein/permease",
-                "locus_tag": "SGO_RS05090",
-                "old_locus_tag": "SGO_1037"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 1671915,
-            "end": 1671935,
-            "strand": "-",
-            "score": 77.7,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
-            "pvalue": 1.7e-08,
-            "qvalue": 0.0223,
-            "sequence": "TTATGTCAGAAAATATAACGT"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 1669171,
-                "end": 1671834,
-                "strand": "-",
-                "id": "cds-WP_012130676.1",
-                "name": "acnA",
-                "product": "aconitate hydratase AcnA",
-                "locus_tag": "SGO_RS07905",
-                "old_locus_tag": "SGO_1613"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 231012,
-            "end": 231032,
-            "strand": "+",
-            "score": 65.7,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
-            "pvalue": 2.68e-07,
-            "qvalue": 0.264,
-            "sequence": "ATATGTCAGAAAAAGTAACAT"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 231300,
-                "end": 231665,
-                "strand": "+",
-                "id": "cds-WP_008808234.1",
-                "name": "SGO_RS01050",
-                "product": "MerR family transcriptional regulator",
-                "locus_tag": "SGO_RS01050",
-                "old_locus_tag": "SGO_0214"
+                "id": "cds-ACA82953.1",
+                "name": "LCK_01126",
+                "locus_tag": "LCK_01126",
+                "product": "Predicted transcriptional regulator",
+                "old_locus_tag": null
             },
             {
-                "organism_id": "NC_009785.1",
-                "start": 231695,
-                "end": 233041,
-                "strand": "+",
-                "id": "cds-WP_011999750.1",
+                "organism_id": "DQ489736.1",
+                "start": 1170247,
+                "end": 1171593,
+                "strand": "-",
+                "id": "cds-ACA82952.1",
                 "name": "glnA",
-                "product": "type I glutamate--ammonia ligase",
-                "locus_tag": "SGO_RS01055",
-                "old_locus_tag": "SGO_0215"
+                "locus_tag": "LCK_01125",
+                "product": "Glutamine synthetase%2C type I",
+                "old_locus_tag": null
             },
             {
-                "organism_id": "NC_009785.1",
-                "start": 233095,
-                "end": 233499,
-                "strand": "+",
-                "id": "cds-WP_011999751.1",
-                "name": "SGO_RS01060",
-                "product": "GNAT family N-acetyltransferase",
-                "locus_tag": "SGO_RS01060",
-                "old_locus_tag": "SGO_0216"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 294209,
-            "end": 294229,
-            "strand": "+",
-            "score": 63.3,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
-            "pvalue": 4.63e-07,
-            "qvalue": 0.295,
-            "sequence": "TGTTGTTATATTTTATTACAT"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 294430,
-                "end": 295368,
-                "strand": "+",
-                "id": "cds-WP_011999807.1",
-                "name": "SGO_RS01365",
-                "product": "dihydroorotate oxidase",
-                "locus_tag": "SGO_RS01365",
-                "old_locus_tag": "SGO_0277"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 295532,
-                "end": 296467,
-                "strand": "+",
-                "id": "cds-WP_011999808.1",
-                "name": "msrB",
-                "product": "peptide-methionine (R)-S-oxide reductase MsrB",
-                "locus_tag": "SGO_RS01370",
-                "old_locus_tag": "SGO_0278"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 296552,
-                "end": 297238,
-                "strand": "+",
-                "id": "cds-WP_011999809.1",
-                "name": "SGO_RS01375",
-                "product": "DUF4947 domain-containing protein",
-                "locus_tag": "SGO_RS01375",
-                "old_locus_tag": "SGO_0279"
-            },
-            {
-                "organism_id": "NC_009785.1",
-                "start": 297330,
-                "end": 298601,
-                "strand": "+",
-                "id": "cds-WP_041789491.1",
-                "name": "SGO_RS01380",
-                "product": "TRZ/ATZ family protein",
-                "locus_tag": "SGO_RS01380",
-                "old_locus_tag": "SGO_0280"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 294211,
-            "end": 294231,
-            "strand": "-",
-            "score": 62.4,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
-            "pvalue": 5.72e-07,
-            "qvalue": 0.295,
-            "sequence": "TCATGTAATAAAATATAACAA"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 292848,
-                "end": 294194,
+                "organism_id": "DQ489736.1",
+                "start": 1169148,
+                "end": 1170128,
                 "strand": "-",
-                "id": "cds-WP_011999806.1",
-                "name": "gdhA",
-                "product": "NADP-specific glutamate dehydrogenase",
-                "locus_tag": "SGO_RS01360",
-                "old_locus_tag": "SGO_0276"
-            }
-        ]
-    },
-    {
-        "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 638679,
-            "end": 638699,
-            "strand": "+",
-            "score": 59.9,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1+",
-            "pvalue": 1.02e-06,
-            "qvalue": 0.334,
-            "sequence": "TGATGTAAGTAAATCTCAAGT"
-        },
-        "genes": [
-            {
-                "organism_id": "NC_009785.1",
-                "start": 638750,
-                "end": 639916,
-                "strand": "+",
-                "id": "cds-WP_012000086.1",
-                "name": "SGO_RS02905",
-                "product": "class I SAM-dependent RNA methyltransferase",
-                "locus_tag": "SGO_RS02905",
-                "old_locus_tag": "SGO_0590"
+                "id": "cds-ACA82951.1",
+                "name": "LCK_01124",
+                "locus_tag": "LCK_01124",
+                "product": "YitT family protein",
+                "old_locus_tag": null
             },
             {
-                "organism_id": "NC_009785.1",
-                "start": 639913,
-                "end": 641325,
-                "strand": "+",
-                "id": "cds-WP_041789565.1",
-                "name": "SGO_RS02910",
-                "product": "cell division site-positioning protein MapZ family protein",
-                "locus_tag": "SGO_RS02910",
-                "old_locus_tag": "SGO_0591"
+                "organism_id": "DQ489736.1",
+                "start": 1168947,
+                "end": 1169132,
+                "strand": "-",
+                "id": "cds-ACA82950.1",
+                "name": "xylH",
+                "locus_tag": "LCK_01123",
+                "product": "Probable tautomerase SE1045",
+                "old_locus_tag": null
             }
         ]
     },
     {
         "tfbs": {
-            "organism_id": "NC_009785.1",
-            "start": 2151106,
-            "end": 2151126,
+            "organism_id": "DQ489736.1",
+            "start": 161600,
+            "end": 161620,
             "strand": "-",
-            "score": 55.2,
-            "name": "TBATGTDAGAAAAYCTAACAT_NC_009785.1-",
-            "pvalue": 3.01e-06,
-            "qvalue": 0.548,
-            "sequence": "TGGTGTCAAGTAATCTGATAT"
+            "score": 71.0,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1-",
+            "pvalue": 7.91e-08,
+            "qvalue": 0.0866,
+            "sequence": "TCATGTCATAATAGATAACAT"
         },
         "genes": [
             {
-                "organism_id": "NC_009785.1",
-                "start": 2149756,
-                "end": 2151009,
+                "organism_id": "DQ489736.1",
+                "start": 160100,
+                "end": 161533,
                 "strand": "-",
-                "id": "cds-WP_012131049.1",
-                "name": "SGO_RS10215",
-                "product": "DUF4041 domain-containing protein",
-                "locus_tag": "SGO_RS10215",
-                "old_locus_tag": "SGO_2086"
+                "id": "cds-ACA81988.1",
+                "name": "LCK_00155",
+                "locus_tag": "LCK_00155",
+                "product": "Aspartate ammonia-lyase",
+                "old_locus_tag": null
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "DQ489736.1",
+            "start": 353189,
+            "end": 353209,
+            "strand": "+",
+            "score": 64.4,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1+",
+            "pvalue": 3.59e-07,
+            "qvalue": 0.295,
+            "sequence": "ACATGTCATAAAAGCTAACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "DQ489736.1",
+                "start": 353253,
+                "end": 354701,
+                "strand": "+",
+                "id": "cds-ACA82178.1",
+                "name": "glnPH1",
+                "locus_tag": "LCK_00345",
+                "product": "ABC-type amino acid transport/signal transduction system%2C periplasmic component/domain",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 354698,
+                "end": 355450,
+                "strand": "+",
+                "id": "cds-ACA82179.1",
+                "name": "LCK_00346",
+                "locus_tag": "LCK_00346",
+                "product": "ABC-type polar amino acid transport system%2C ATPase component",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 355545,
+                "end": 356984,
+                "strand": "+",
+                "id": "cds-ACA82180.1",
+                "name": "glnPH2",
+                "locus_tag": "LCK_00347",
+                "product": "ABC-type amino acid transport/signal transduction system%2C periplasmic component/domain",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 357033,
+                "end": 358070,
+                "strand": "+",
+                "id": "cds-ACA82181.1",
+                "name": "coiA",
+                "locus_tag": "LCK_00348",
+                "product": "Competence protein",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 358128,
+                "end": 359945,
+                "strand": "+",
+                "id": "cds-ACA82182.1",
+                "name": "pepF2",
+                "locus_tag": "LCK_00349",
+                "product": "Oligoendopeptidase F",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 359997,
+                "end": 360398,
+                "strand": "+",
+                "id": "cds-ACA82183.1",
+                "name": "cdd",
+                "locus_tag": "LCK_00350",
+                "product": "Cytidine deaminase",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 360418,
+                "end": 361338,
+                "strand": "+",
+                "id": "cds-ACA82184.1",
+                "name": "LCK_00351",
+                "locus_tag": "LCK_00351",
+                "product": "2-oxo-4-phenylbutanoate reductase",
+                "old_locus_tag": null
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "DQ489736.1",
+            "start": 364824,
+            "end": 364844,
+            "strand": "+",
+            "score": 57.1,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1+",
+            "pvalue": 1.97e-06,
+            "qvalue": 0.375,
+            "sequence": "TGTTTTCAGAAAAAATGACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "DQ489736.1",
+                "start": 364964,
+                "end": 366421,
+                "strand": "+",
+                "id": "cds-ACA82189.1",
+                "name": "sucP",
+                "locus_tag": "LCK_00356",
+                "product": "Sucrose phosphorylase",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 366360,
+                "end": 367313,
+                "strand": "+",
+                "id": "cds-ACA82190.1",
+                "name": "LCK_00357",
+                "locus_tag": "LCK_00357",
+                "product": "Putative fructokinase",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 367385,
+                "end": 367747,
+                "strand": "+",
+                "id": "cds-ACA82191.1",
+                "name": "LCK_00358",
+                "locus_tag": "LCK_00358",
+                "product": "Predicted transcriptional regulator",
+                "old_locus_tag": null
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "DQ489736.1",
+            "start": 261787,
+            "end": 261807,
+            "strand": "+",
+            "score": 56.9,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1+",
+            "pvalue": 2.06e-06,
+            "qvalue": 0.375,
+            "sequence": "TCATGTAAAAATAGTTCATAT"
+        },
+        "genes": [
+            {
+                "organism_id": "DQ489736.1",
+                "start": 261820,
+                "end": 262431,
+                "strand": "+",
+                "id": "cds-ACA82077.1",
+                "name": "cadD",
+                "locus_tag": "LCK_00244",
+                "product": "Predicted permease%2C cadmium resistance protein",
+                "old_locus_tag": null
+            },
+            {
+                "organism_id": "DQ489736.1",
+                "start": 262439,
+                "end": 262741,
+                "strand": "+",
+                "id": "cds-ACA82078.1",
+                "name": "LCK_00245",
+                "locus_tag": "LCK_00245",
+                "product": "Predicted transcriptional regulator",
+                "old_locus_tag": null
+            }
+        ]
+    },
+    {
+        "tfbs": {
+            "organism_id": "DQ489736.1",
+            "start": 481310,
+            "end": 481330,
+            "strand": "-",
+            "score": 56.5,
+            "name": "TBATGTDAGAAAAYCTAACAT_DQ489736.1-",
+            "pvalue": 2.22e-06,
+            "qvalue": 0.375,
+            "sequence": "TTATATGAAAATTTTTTACAT"
+        },
+        "genes": [
+            {
+                "organism_id": "DQ489736.1",
+                "start": 480367,
+                "end": 481218,
+                "strand": "-",
+                "id": "cds-ACA82294.1",
+                "name": "gntR",
+                "locus_tag": "LCK_00461",
+                "product": "Transcriptional regulator",
+                "old_locus_tag": null
             }
         ]
     }
