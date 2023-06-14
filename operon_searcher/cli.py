@@ -4,12 +4,11 @@ from pathlib import Path
 from pprint import pformat
 from typing import Annotated, Optional
 import typer
-from operon_searcher import searcher, visualizer
+from operon_searcher import searcher
 from operon_searcher.gene import genomic_parser
 from operon_searcher.searcher import search_operons
 
 from operon_searcher.tf import fimo_parser
-from operon_searcher.visualizer import visualize_operons
 
 import rich
 
@@ -65,12 +64,12 @@ def main(
         help="Maximum allowed consecutive failed hits."
     ),
     tfbs_color: str = typer.Option(
-        "#ffd700",
+        None,
         "--tfbs-color",
         help="Color of binding site when visualizing."
     ),
     gene_color: str = typer.Option(
-        "#cffccc",
+        None,
         "--gene-color",
         help="Color of gene when visualizing."
     ),
@@ -87,8 +86,10 @@ def main(
     searcher.GENE_TO_BINDING_SITE_MAX_GAP = site_gap
     searcher.MAX_FAILED_HITS              = max_fails
 
-    visualizer.TFBS_COLOUR = tfbs_color
-    visualizer.GENE_COLOUR = gene_color
+    if tfbs_color is not None or gene_color is not None:
+        from operon_searcher import visualizer
+        visualizer.TFBS_COLOUR = tfbs_color
+        visualizer.GENE_COLOUR = gene_color
 
     if folder is None and (fimo_file is None or genomic_file is None):
         # Raise exception or something...
@@ -101,6 +102,7 @@ def main(
     genes = genomic_parser(genomic_file)
     operons = search_operons(binding_sites, genes)
     if do_visualize:
+        from operon_searcher.visualizer import visualize_operons
         visualize_operons(operons)
     if do_print:
         rich.print(pformat(tuple(operons.items()), sort_dicts=False))
