@@ -15,6 +15,7 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
     failed_hits = 0
     tf_genes: dict[TFBS, list[Gene]] = {}
     for n, tf in enumerate(binding_sites):
+        tf.n = n # TODO: properly implement this
         if failed_hits > MAX_FAILED_HITS and n >= 20:
             break
         gene_tail = -1
@@ -33,14 +34,14 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
                 if gene_tail == -1:
                     condition = (0 <= gene.start - tf.end <= GENE_TO_BINDING_SITE_MAX_GAP)
                 else:
-                    condition = ((tf.end < gene.start) and (0 <= gene.start - gene_tail <= GENE_OPERON_MAX_GAP))
+                    condition = ((tf.end < gene.start) and (gene.start - gene_tail <= GENE_OPERON_MAX_GAP))
                 if condition:
                     gene_tail = gene.end
             elif tf.strand == Strand.Negative:
                 if gene_tail == -1:
                     condition = (0 <= tf.start - gene.end <= GENE_TO_BINDING_SITE_MAX_GAP)
                 else:
-                    condition = (tf.start > gene.end and (0 <= gene_tail - gene.end <= GENE_OPERON_MAX_GAP))
+                    condition = (tf.start > gene.end and (gene_tail - gene.end <= GENE_OPERON_MAX_GAP))
                 if condition:
                     gene_tail = gene.start
             else:

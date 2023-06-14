@@ -17,8 +17,8 @@ class TFBS(SubSequence):
         return hash(str(super().__hash__()) + self.sequence)
 
 
-def fimo_parser(path: Path) -> list[TFBS]:
-    with open(path / 'fimo.gff', 'r') as file:
+def fimo_parser(filepath: Path) -> list[TFBS]:
+    with open(filepath, 'r') as file:
         l = []
         for line in file.readlines():
             line.strip("\n")

@@ -13,8 +13,8 @@ class Gene(SubSequence):
     def __hash__(self) -> int:
         return hash(str(super().__hash__()) + self.id)
 
-def genomic_parser(path: Path) -> list[Gene]:
-    with open(path / 'genomic.gff', 'r') as file:
+def genomic_parser(filepath: Path) -> list[Gene]:
+    with open(filepath, 'r') as file:
         l = []
         for line in file.readlines():
             line.strip("\n")

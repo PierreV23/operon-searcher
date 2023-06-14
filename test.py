@@ -3,7 +3,7 @@ from pprint import pprint, pformat
 from operon_searcher.gene import genomic_parser
 from operon_searcher.searcher import search_operons
 from operon_searcher.tf import fimo_parser
-from operon_searcher.visualize import visualize_operons
+from operon_searcher.visualizer import visualize_operons
 
 REFSEQ = Path() / 'RefSeq_GCA_000017005.1'
 GENBANK = Path() / 'Genbank_GCF_000017005.1'
