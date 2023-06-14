@@ -17,7 +17,7 @@ def create_graphic_features(tf: TFBS, genes: list[Gene]) -> list[GraphicFeature]
     for gene in genes:
         if gene.name == gene.locus_tag:
             if USE_OLD_LOCUS_TAG:
-                label = gene.old_locus_tag or gene.locus_tag
+                label = gene.old_locus_tag if gene.old_locus_tag != "None" else gene.locus_tag
             else:
                 label = gene.locus_tag or gene.old_locus_tag
         else:

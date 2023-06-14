@@ -1,4 +1,5 @@
 import dataclasses
+from typing import Optional
 from operon_searcher.lib import SubSequence, automatic_field_converter, from_dict, parse_rest
 
 from pathlib import Path
@@ -12,9 +13,9 @@ gene_old_locus_tags = {}
 class Gene(SubSequence):
     id: str
     name: str
-    product: str
     locus_tag: str
-    old_locus_tag: str
+    product: Optional[str] = None
+    old_locus_tag: Optional[str] = None
     __post_init__ = automatic_field_converter
     from_dict = from_dict
     def __hash__(self) -> int:

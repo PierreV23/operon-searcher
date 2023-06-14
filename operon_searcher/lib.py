@@ -12,6 +12,8 @@ class Strand(str, Enum):
 def automatic_field_converter(self):  # Credit: https://stackoverflow.com/a/54863733
     for field in dataclasses.fields(self):
         value = getattr(self, field.name)
+        # if not isinstance(field.default, dataclasses._MISSING_TYPE) and getattr(self, field.name) is None:
+        #         setattr(self, field.name, field.default)
         if not isinstance(value, field.type):
             try:
                 self.__dict__[field.name] = field.type(value)
