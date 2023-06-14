@@ -3,11 +3,14 @@ from operon_searcher.lib import SubSequence, automatic_field_converter, from_dic
 
 from pathlib import Path
 
+# locus_tag : name
+gene_names = {}
 
 @dataclasses.dataclass
 class Gene(SubSequence):
     id: str
     name: str
+    product: str
     __post_init__ = automatic_field_converter
     from_dict = from_dict
     def __hash__(self) -> int:
@@ -25,8 +28,7 @@ def genomic_parser(filepath: Path) -> list[Gene]:
             # id, dbxref, iscircular, 
             # if int(start)-int(end) > 0:
             #     print("interesting")
-            if soort_seq != 'gene':
-                continue
+            
             data = {
                 'organism_id': organism_id,
                 'start': start,
@@ -34,5 +36,12 @@ def genomic_parser(filepath: Path) -> list[Gene]:
                 'strand': strand
             }
             data |= parse_rest(rest)
+            
+
+            if soort_seq != 'CDS':
+                if soort_seq in ('gene', 'pseudogene'):
+                    gene_names[data['locus_tag']] = data['name']
+                continue
+            data['name'] = gene_names[data['locus_tag']] # gene -> CDS
             l.append(Gene.from_dict(data))
         return l

@@ -80,11 +80,18 @@ def main(
         help="Exporteer operons naar een json bestand.",
         file_okay=True
     ),
+    do_ignore_hypothetical_proteins: bool = typer.Option(
+        False,
+        "--ignore-hypothetical-proteins",
+        help="Het bestaan van een gen negeren tijdens het zoeken naar operons, als het gen een hypothetical protein is.",
+        file_okay=True
+    ),
 ):
     searcher.GENE_OPERON_MAX_GAP          = gene_gap
     searcher.FIMO_BATCH_SIZE              = batch_size
     searcher.GENE_TO_BINDING_SITE_MAX_GAP = site_gap
     searcher.MAX_FAILED_HITS              = max_fails
+    searcher.IGNORE_HYPOTHETICAL_PROTEINS = do_ignore_hypothetical_proteins
 
     if tfbs_color is not None or gene_color is not None:
         from operon_searcher import visualizer

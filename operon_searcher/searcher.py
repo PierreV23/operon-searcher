@@ -8,6 +8,7 @@ GENE_OPERON_MAX_GAP = 200
 FIMO_BATCH_SIZE = 30
 GENE_TO_BINDING_SITE_MAX_GAP = 300
 MAX_FAILED_HITS = 5
+IGNORE_HYPOTHETICAL_PROTEINS = False
 
 def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
     binding_sites = sorted(binding_sites, key=lambda tfbs: tfbs.pvalue)[:FIMO_BATCH_SIZE]
@@ -19,6 +20,8 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
             break
         gene_tail = -1
         for gene in genes:
+            if IGNORE_HYPOTHETICAL_PROTEINS and gene.product == "hypothetical protein":
+                continue
             if tf.strand != gene.strand:
                 continue
             condition = False

@@ -1,4 +1,6 @@
 from pathlib import Path
+
+import matplotlib
 from operon_searcher.gene import Gene
 from operon_searcher.tf import TFBS
 from dna_features_viewer import GraphicFeature, GraphicRecord # deze import duurt kapot lang
@@ -32,3 +34,4 @@ def visualize_operons(tf_genes: dict[TFBS, list[Gene]]):
         # ax.figure.set_size_inches(1920/100, 1080/100)
         ax.figure.set_size_inches(1200/100, 800/100)
         ax.figure.savefig(str(Path() / 'output' / f'{tf.n:02} - {tf.score}.png'), dpi = 300)
+        matplotlib.pyplot.close(ax.figure)
