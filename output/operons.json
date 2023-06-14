@@ -116,6 +116,36 @@
                 "name": "SGO_RS01365",
                 "product": "dihydroorotate oxidase",
                 "locus_tag": "SGO_RS01365"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 295532,
+                "end": 296467,
+                "strand": "+",
+                "id": "cds-WP_011999808.1",
+                "name": "msrB",
+                "product": "peptide-methionine (R)-S-oxide reductase MsrB",
+                "locus_tag": "SGO_RS01370"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 296552,
+                "end": 297238,
+                "strand": "+",
+                "id": "cds-WP_011999809.1",
+                "name": "SGO_RS01375",
+                "product": "DUF4947 domain-containing protein",
+                "locus_tag": "SGO_RS01375"
+            },
+            {
+                "organism_id": "NC_009785.1",
+                "start": 297330,
+                "end": 298601,
+                "strand": "+",
+                "id": "cds-WP_041789491.1",
+                "name": "SGO_RS01380",
+                "product": "TRZ/ATZ family protein",
+                "locus_tag": "SGO_RS01380"
             }
         ]
     },

@@ -2,6 +2,7 @@ from dataclasses import asdict
 import json
 from pathlib import Path
 from pprint import pformat
+import threading
 from typing import Annotated, Optional
 import typer
 from operon_searcher import searcher
@@ -86,17 +87,12 @@ def main(
         help="Het bestaan van een gen negeren tijdens het zoeken naar operons, als het gen een hypothetical protein is.",
         file_okay=True
     ),
-):
+):    
     searcher.GENE_OPERON_MAX_GAP          = gene_gap
     searcher.FIMO_BATCH_SIZE              = batch_size
     searcher.GENE_TO_BINDING_SITE_MAX_GAP = site_gap
     searcher.MAX_FAILED_HITS              = max_fails
     searcher.IGNORE_HYPOTHETICAL_PROTEINS = do_ignore_hypothetical_proteins
-
-    if tfbs_color is not None or gene_color is not None:
-        from operon_searcher import visualizer
-        visualizer.TFBS_COLOUR = tfbs_color
-        visualizer.GENE_COLOUR = gene_color
 
     if folder is None and (fimo_file is None or genomic_file is None):
         # Raise exception or something...
@@ -109,8 +105,11 @@ def main(
     genes = genomic_parser(genomic_file)
     operons = search_operons(binding_sites, genes)
     if do_visualize:
-        from operon_searcher.visualizer import visualize_operons
-        visualize_operons(operons)
+        from operon_searcher import visualizer
+        if tfbs_color is not None or gene_color is not None:
+            visualizer.TFBS_COLOUR = tfbs_color
+            visualizer.GENE_COLOUR = gene_color
+        visualizer.visualize_operons(operons)
     if do_print:
         rich.print(pformat(tuple(operons.items()), sort_dicts=False))
     if export is not None:
