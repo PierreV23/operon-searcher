@@ -106,7 +106,7 @@ def main(
 
     if folder is None and (fimo_file is None or genomic_file is None):
         # Raise exception or something...
-        ...
+        raise Exception("Folder was not given,")
     if fimo_file is None:
         fimo_file = folder / 'fimo.gff'
     binding_sites = fimo_parser(fimo_file)
@@ -114,13 +114,15 @@ def main(
         genomic_file = folder / 'genomic.gff'
     genes = genomic_parser(genomic_file)
     operons = search_operons(binding_sites, genes)
+    if do_visualize or export:
+        output_folder.mkdir(exist_ok=True)
     if do_visualize:
         from operon_searcher import visualizer
         if tfbs_color is not None or gene_color is not None:
             visualizer.TFBS_COLOUR = tfbs_color
             visualizer.GENE_COLOUR = gene_color
         visualizer.USE_OLD_LOCUS_TAG = visualize_use_old_locus_tag
-        visualizer.visualize_operons(operons)
+        visualizer.visualize_operons(operons, output_folder)
     if do_print:
         rich.print(pformat(tuple(operons.items()), sort_dicts=False))
     if export is not None:
