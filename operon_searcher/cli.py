@@ -90,6 +90,12 @@ def main(
         False,
         "--v-old-locus-tag",
         help="Gebruik de oude locus tags bij de visualizatie."
+    ),
+    output_folder: Path = typer.Option(
+        Path() / 'output',
+        "-o",
+        "--output",
+        help="Specify output folder for visualizations."
     )
 ):    
     searcher.GENE_OPERON_MAX_GAP          = gene_gap

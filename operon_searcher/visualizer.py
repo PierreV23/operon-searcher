@@ -17,7 +17,7 @@ def create_graphic_features(tf: TFBS, genes: list[Gene]) -> list[GraphicFeature]
     for gene in genes:
         if gene.name == gene.locus_tag:
             if USE_OLD_LOCUS_TAG:
-                label = gene.old_locus_tag if gene.old_locus_tag != "None" else gene.locus_tag
+                label = gene.old_locus_tag if gene.old_locus_tag not in (None, "None") else gene.locus_tag
             else:
                 label = gene.locus_tag or gene.old_locus_tag
         else:
@@ -39,7 +39,5 @@ def visualize_operons(tf_genes: dict[TFBS, list[Gene]]):
         labels = [int(f) for f in ax.get_xticks()]
         ax.set_xticklabels(labels=labels, rotation=45, ha='right')
         ax.figure.tight_layout()
-        # ax.figure.set_size_inches(1920/100, 1080/100)
-        ax.figure.set_size_inches(1200/100, 800/100)
         ax.figure.savefig(str(Path() / 'output' / f'{tf.n:02} - {tf.score}.png'), dpi = 300)
         matplotlib.pyplot.close(ax.figure)
