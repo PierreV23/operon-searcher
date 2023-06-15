@@ -39,5 +39,5 @@ def visualize_operons(tf_genes: dict[TFBS, list[Gene]], output_folder: Path):
         labels = [int(f) for f in ax.get_xticks()]
         ax.set_xticklabels(labels=labels, rotation=45, ha='right')
         ax.figure.tight_layout()
-        ax.figure.savefig(str(Path() / 'output' / f'{tf.n:02} - {tf.score}|{tf.start}-{tf.end}.png'), dpi = 300)
+        ax.figure.savefig(output_folder / f'{tf.n:02} - {tf.score}|{tf.start}-{tf.end}.png', dpi = 300)
         matplotlib.pyplot.close(ax.figure)
