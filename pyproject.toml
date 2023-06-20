@@ -1,0 +1,6 @@
+[build-system]
+requires = ["setuptools ~= 58.0", "cython ~= 0.29.0"]
+
+[project]
+name = "operon-searcher"
+version = "1.0"
