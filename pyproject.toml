@@ -7,7 +7,7 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 
 [project.scripts]  # Optional
-operon_searcher = "operon_searcher"
+operon_searcher = "operon_searcher:main"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "wheel"]
