@@ -20,7 +20,7 @@ or
 
 If you visualize, the pictures can be found by default in the folder `output`, but a custom folder can be specified using `--output`.
 
-fimo.gff can be found running a MEME motif on your genome using the FIMO tool online. genomic.gff (or a name alike) can usually be obtained from online databases, these contain the positions of genes.
+fimo.gff can be found by running a MEME motif on your genome using the FIMO tool online. genomic.gff (or a name alike) can usually be obtained from online databases, these contain the positions of genes.
 
 Use `--help` to see all options: `python -m operon_searcher --help`
 
