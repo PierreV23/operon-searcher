@@ -59,11 +59,11 @@ def main(
         "--batch-size",
         help="Amount of fimo hits to be tried, sorted on p-value.",
     ),
-    max_fails: int = typer.Option(
-        5,
-        "--max-fails",
-        help="Maximum allowed consecutive failed hits."
-    ),
+    # max_fails: int = typer.Option(
+    #     5,
+    #     "--max-fails",
+    #     help="Maximum allowed consecutive failed hits."
+    # ),
     tfbs_color: str = typer.Option(
         None,
         "--tfbs-color",
@@ -101,7 +101,7 @@ def main(
     searcher.GENE_OPERON_MAX_GAP          = gene_gap
     searcher.FIMO_BATCH_SIZE              = batch_size
     searcher.GENE_TO_BINDING_SITE_MAX_GAP = site_gap
-    searcher.MAX_FAILED_HITS              = max_fails
+    # searcher.MAX_FAILED_HITS              = max_fails
     searcher.IGNORE_HYPOTHETICAL_PROTEINS = do_ignore_hypothetical_proteins
 
     if folder is None and (fimo_file is None or genomic_file is None):

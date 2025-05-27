@@ -7,7 +7,7 @@ from operon_searcher.tf import TFBS
 GENE_OPERON_MAX_GAP = 200
 FIMO_BATCH_SIZE = 30
 GENE_TO_BINDING_SITE_MAX_GAP = 300
-MAX_FAILED_HITS = 5
+# MAX_FAILED_HITS = 5
 IGNORE_HYPOTHETICAL_PROTEINS = False
 
 def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
@@ -16,8 +16,11 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
     tf_genes: dict[TFBS, list[Gene]] = {}
     for n, tf in enumerate(binding_sites):
         tf.n = n # TODO: properly implement this
-        if failed_hits > MAX_FAILED_HITS and n >= 20:
-            break
+        # This should be reimplemented with a custom parameter instead of
+        #  hardcoded `20`. A failed hit should be if a TF doesnt have a operon
+        #  for some reason. For now its disabled.
+        # if failed_hits > MAX_FAILED_HITS and n >= 20:
+        #     break
         gene_tail = -1
         genes_loop = genes if tf.strand == Strand.Positive else genes[::-1]
         for gene in genes_loop:
@@ -30,7 +33,7 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
             if any(gene.start <= pos <= gene.end for pos in (tf.start, tf.end)):
                 if tf in tf_genes:
                     tf_genes.pop(tf)
-                failed_hits += 1
+                # failed_hits += 1
                 break
 
             if tf.strand == Strand.Positive:
@@ -53,7 +56,10 @@ def search_operons(binding_sites: list[TFBS], genes: list[Gene]):
                 if tf not in tf_genes:
                     tf_genes[tf] = []
                 tf_genes[tf].append(gene)
-                failed_hits = 0
+                # failed_hits = 0
             else:
-                failed_hits += 1
+                ...
+                # failed_hits += 1
+        # if not tf_genes.get(tf):
+        #     failed_hits += 1
     return tf_genes
